@@ -7,7 +7,7 @@ import os  # Used for accessing environment variables
 
 # Load environment variables from a .env file
 load_dotenv()
-
+bing_subscription_key = 'a0c2201a3d7e47a4a20fe85f2ee7d05e'
 # Set up your OpenAI API key from environment variables
 oai_key = os.getenv('OPEN_AI_API_KEY')
 client = openai.OpenAI(api_key=oai_key)  # Initialize the OpenAI client with the API key
@@ -21,7 +21,7 @@ freshness = "Day"  # Limit results to the last 24 hours
 market = "en-US"  # Target market for the search results
 
 # Set the headers with the Bing Search API subscription key from environment variables
-bing_subscription_key = os.getenv('BING_API_KEY')
+#bing_subscription_key = os.getenv('BING_API_KEY')
 headers = {"Ocp-Apim-Subscription-Key": bing_subscription_key}
 
 # Parameters for the Bing Search API request
